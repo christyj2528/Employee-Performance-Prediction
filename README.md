@@ -68,7 +68,7 @@ Dataset Overview
 **Department-wise Average Performance**       
 | Department | Average Performance Rating |
 | :--- | :---: |
-| Development | 3.09 |
+| Development | 3.08 |
 | Data Science | 3.05 |
 | Human Resources | 2.93 |
 | Research & Development | 2.92 |
@@ -81,32 +81,31 @@ Dataset Overview
 **Model Performance Comparison** 
 | Model | Accuracy |
 | :--- | :---: |
-| Gaussian Naive Bayes | 81.7% |
-| Logistic Regression | 82.2% |
-| K-Nearest Neighbor | 83.1% |
-| Artificial Neural Network | 86.1% |
-| Support Vector Machine | 87.8% |
-| Decision Tree | 88.6% |
-| XGBoost | 89.7% |
-| Random Forest (GridSearchCV) | 92.8% |
+| K-Nearest Neighbor | 81.9% |
+| Gaussian Naive Bayes | 82.5% |
+| Logistic Regression | 82.5% |
+| Artificial Neural Network | 85.6% |
+| Support Vector Machine | 86.4% |
+| Decision Tree | 90.0% |  
+| XGBoost | 91.4% |
+| Random Forest (GridSearchCV) | 94.4% |
 
 
-* The **Random Forest classifier** optimized using **GridSearchCV** achieved the highest prediction accuracy of **92.8%**, making it the most suitable model for predicting employee performance in this study.
+* The **Random Forest classifier** optimized using **GridSearchCV** achieved the highest prediction accuracy of **94.4%**, making it the most suitable model for predicting employee performance in this study.
 
 
 ### 5. Analysis and Insights
-* The dataset contained **1,200 records with no missing values**, allowing reliable analysis and model development without extensive data cleaning.
-* Department-wise analysis showed that **Development** and **Data Science** had the highest average performance ratings, while **Finance** and **Sales** showed comparatively lower performance.
-* Correlation analysis identified **Employee Environment Satisfaction (0.396)** as the strongest factor influencing performance, followed by **Employee Last Salary Hike Percent (0.334)** and **Employee Work-Life Balance (0.124)**.
-* Factors such as **Years Since Last Promotion, Experience Years in Current Role, Years With Current Manager, and Experience Years at This Company** showed negative relationships with performance, which may indicate reduced motivation due to limited career growth or prolonged role duration.
-* Tree-based ensemble models performed best among all algorithms tested. **Random Forest achieved the highest accuracy (92.8%), followed by XGBoost (89.7%)**, showing their effectiveness for employee performance prediction.
-* Model evaluation showed that predictions were more accurate for the majority performance class (Rating 3), while identifying employees with Ratings 2 and 4 was more challenging due to fewer records in those categories.
+* The dataset contained **1,200 employee records with no missing values**, enabling reliable analysis and model development.
+* Department-wise analysis showed that **Development** and **Data Science** had the highest average performance ratings, while **Finance** had the lowest.
+* **Random Forest** achieved the **highest prediction accuracy (94.44%)**, followed by **XGBoost (91.4%)** and **Decision Tree (90.00%)**, indicating that tree-based models were the most effective for predicting employee performance.
+* Feature importance analysis identified **Employee Last Salary Hike Percent**, **Employee Environment Satisfaction**, and **Years Since Last Promotion** as the three most influential factors affecting employee performance.
+* The results indicate that employee performance is strongly influenced by **recognition through salary growth**, **a positive work environment**, and **timely career progression**, while factors such as job role, department, work-life balance, and experience also contribute to prediction accuracy.
 
+  
 ### 6. Recommendations
-* Improve **employee environment satisfaction** by promoting a positive workplace culture, employee engagement, and supportive leadership.
-* Implement **performance-based rewards and salary growth opportunities** to encourage higher productivity.
-* Support **work-life balance** through flexible policies and manageable workloads.
-* Provide clearer **career growth and promotion opportunities** to reduce employee dissatisfaction.
-* Review **managerial assignments and leadership practices** to maintain employee engagement.
-* Use the **Random Forest prediction model** to identify employees needing additional support or development.
-* Focus improvement efforts on lower-performing departments such as **Finance and Sales** through targeted interventions.
+* Implement **performance-based salary increments**, as **Last Salary Hike Percent** was identified as the most important factor influencing employee performance.
+* Improve employee satisfaction by fostering a supportive work environment, encouraging employee engagement, and strengthening leadership practices.
+* Establish **clear promotion and career development pathways** to reduce long promotion gaps and maintain employee motivation.
+* Continue supporting **work-life balance** through flexible work policies and employee wellness initiatives.
+* Use the **Random Forest prediction** model to identify employees who may require additional training, mentoring, or performance support.
+* Give additional attention to departments with comparatively lower average performance, particularly Finance, by implementing targeted improvement strategies.
